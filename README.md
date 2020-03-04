@@ -1,14 +1,14 @@
 # Flight-Schedules-React
 
-I started this project to demonstrate what I have learned about developing web applications using React.
+I started this project to demonstrate what I have learned about developing web applications using React. This app is meant to be just a showcase.
 There are certain requirements that I have set myself for this app:
  - The app must be built using the latest stable version of React
  - The app must be written using Typescript - it just adds an extra layer of complexity
  - The app must use a grid layout - either using a predefined framework like [Carbon](http://www.carbondesignsystem.com), or build it using CSS
- - The app must make live API calls to fetch data - in this case, we'll be calling the lufthansa developer API
- - The API calls must be testable, using something like react-saga
- - For data storage, the app must use Redux with Immutable.js
- - Try to use new React features like hooks where possible
+ - The app must make live API calls to fetch data - in this case, we'll be calling the [Lufthansa developer API](developer.lufthansa.com)
+ - The API calls must be testable, using something like [Redux-Saga](https://redux-saga.js.org/)
+ - For data storage, the app must use [Redux](https://redux.js.org/) with [Immutable.js](https://github.com/immutable-js/immutable-js)
+ - Try to use new React features like [Hooks](https://reactjs.org/docs/hooks-intro.html) where possible
  - Every component, saga, reducer, etc that can be tested, should be tested
 
 These are just some of the requirements that I could think of when I started development. More requirements will be added as it develops.
