@@ -1,15 +1,23 @@
 import React from 'react';
 import styled from 'styled-components';
-import HeaderProps from './header-props';
+import HeaderType from './header-types';
 
-const UnstyledHeader : React.FunctionComponent<HeaderProps> = (props) => (
-  <div className={props.className}>
-    {props.children}
+const UnstyledHeader: React.FunctionComponent<HeaderType> = ({
+  className,
+  children,
+  ...props
+}) => (
+  <div className={className} {...props}>
+    {children}
   </div>
 );
 
 export const Header = styled(UnstyledHeader)`
-  grid-column: col-start / span 12;
-  background-color: grey;
-  color: ${props => props.textColor};
+  grid-column: 1 / span 12;
+  grid-row: 1;
+  display: flex;
+  flex-flow: row no-wrap;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #ff9900;
 `;

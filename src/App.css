@@ -1,5 +1,6 @@
 .App {
   overflow: scroll;
+  font: 1.2em "OperatorMono-Book", sans-serif;
 }
 
 .App-logo {

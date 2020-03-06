@@ -1,17 +1,16 @@
 import React from 'react';
 import './App.css';
-import Grid from './components/Grid'
+import Grid from './components/grid';
 import Header from './components/header';
-import Sidebar from './components/sidebar';
-import Content from './components/content';
 
 function App() {
   return (
-    <div className="App">
-      <Grid>
-        <Header textColor="white">Header</Header>
-        <Sidebar className="sidebar" items={['Schedules', 'Status']}>Sidebar</Sidebar>
-        <Content className="content">Content</Content>
+    <div className='App'>
+      <Grid className='grid'>
+        <Header className='header'>
+          <div className='app-name'>Lufthansa Flight Center</div>
+          <div className='menu'>Menu</div>
+        </Header>
       </Grid>
     </div>
   );
