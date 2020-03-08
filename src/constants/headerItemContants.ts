@@ -1,6 +1,6 @@
-import { HeaderItemType } from '../components/headerNavigation/header-navigation-types';
+import { IHeaderItemType } from '../components/headerNavigation/header-navigation-types';
 
-export const headerItems: Array<HeaderItemType> = [
+export const headerItems: Array<IHeaderItemType> = [
   {
     label: {
       label: 'Lufthansa Flight App',

@@ -1,5 +1,5 @@
-interface GridType {
+interface IGridType {
   className?: string;
 }
 
-export default GridType;
+export default IGridType;

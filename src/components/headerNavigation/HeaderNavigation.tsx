@@ -2,12 +2,12 @@ import React from 'react';
 import styled from 'styled-components';
 import Label from '../label';
 import {
-  HeaderItemType,
-  HeaderNavigationType,
+  IHeaderItemType,
+  IHeaderNavigationType,
 } from './header-navigation-types';
 
 const renderHeaderItem: (
-  headerItem: HeaderItemType,
+  headerItem: IHeaderItemType,
 ) => React.ReactNode = headerItem => {
   const {
     label: {
@@ -46,7 +46,7 @@ const renderHeaderItem: (
   );
 };
 
-const UnstyledHeaderNavigation: React.FunctionComponent<HeaderNavigationType> = ({
+const UnstyledHeaderNavigation: React.FunctionComponent<IHeaderNavigationType> = ({
   headerItems,
   className,
   children,

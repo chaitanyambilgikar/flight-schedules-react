@@ -1,4 +1,4 @@
-interface LabelType {
+interface ILabelType {
   label: string;
   labelcolor: string;
   textcolor: string;
@@ -16,4 +16,4 @@ interface LabelType {
   className?: string;
 }
 
-export default LabelType;
+export default ILabelType;

@@ -1,8 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
-import LabelType from './label-type';
+import ILabelType from './label-type';
 
-const UnstyledLabel: React.FunctionComponent<LabelType> = ({
+const UnstyledLabel: React.FunctionComponent<ILabelType> = ({
   label,
   onLabelClick,
   className,

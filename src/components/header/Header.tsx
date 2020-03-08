@@ -1,8 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
-import HeaderType from './header-types';
+import IHeaderType from './header-types';
 
-const UnstyledHeader: React.FunctionComponent<HeaderType> = ({
+const UnstyledHeader: React.FunctionComponent<IHeaderType> = ({
   className,
   children,
   ...props

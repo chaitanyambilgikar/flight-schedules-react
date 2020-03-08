@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import GridType from './grid-types';
+import IGridType from './grid-types';
 const GridLayout = styled.div`
   display: grid;
   height: 100vh;
@@ -9,7 +9,7 @@ const GridLayout = styled.div`
   grid-gap: 10px;
 `;
 
-export const Grid: React.FunctionComponent<GridType> = ({
+export const Grid: React.FunctionComponent<IGridType> = ({
   className,
   children,
   ...props

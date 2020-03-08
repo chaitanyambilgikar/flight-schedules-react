@@ -1,9 +1,9 @@
-import LabelType from '../label/label-type';
-export type HeaderItemType = {
-  label: LabelType;
+import ILabelType from '../label/label-type';
+export type IHeaderItemType = {
+  label: ILabelType;
   onHeaderClick?: any;
 };
-export type HeaderNavigationType = {
+export type IHeaderNavigationType = {
   className?: string;
-  headerItems: Array<HeaderItemType>;
+  headerItems: Array<IHeaderItemType>;
 };

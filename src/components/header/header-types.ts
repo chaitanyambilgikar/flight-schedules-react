@@ -1,5 +1,5 @@
-interface HeaderType {
+interface IHeaderType {
   className?: string;
 }
 
-export default HeaderType;
+export default IHeaderType;
