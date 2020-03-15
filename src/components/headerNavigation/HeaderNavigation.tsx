@@ -1,48 +1,29 @@
 import React from 'react';
 import styled from 'styled-components';
-import Label from '../label';
+import { Link } from 'react-router-dom';
+import Label from 'components/label';
 import {
   IHeaderItemType,
   IHeaderNavigationType,
 } from './header-navigation-types';
 
+const StyledLink = styled(Link)`
+  text-decoration: none;
+`;
+
 const renderHeaderItem: (
   headerItem: IHeaderItemType,
 ) => React.ReactNode = headerItem => {
-  const {
-    label: {
-      label,
-      labelcolor,
-      textcolor,
-      labelwidth,
-      labelheight,
-      labelstartcolumn,
-      labelstartrow,
-      labelborder,
-      labelcursor,
-      labelfont,
-      labelhover,
-      labelrelativeheight,
-    },
-    onHeaderClick,
-  } = headerItem;
-  return (
-    <Label
-      key={label}
-      label={label}
-      labelcolor={labelcolor}
-      textcolor={textcolor}
-      labelwidth={labelwidth}
-      labelheight={labelheight}
-      labelstartcolumn={labelstartcolumn}
-      labelstartrow={labelstartrow}
-      onLabelClick={onHeaderClick}
-      labelborder={labelborder}
-      labelcursor={labelcursor}
-      labelfont={labelfont}
-      labelhover={labelhover}
-      labelrelativeheight={labelrelativeheight}
-    />
+  const { label, onHeaderClick, link } = headerItem;
+  const HeaderItem = (
+    <Label key={label.label} onLabelClick={onHeaderClick} {...label} />
+  );
+  return onHeaderClick ? (
+    <StyledLink to={`${link}`} key={label.label}>
+      {HeaderItem}
+    </StyledLink>
+  ) : (
+    HeaderItem
   );
 };
 

@@ -39,6 +39,7 @@ export const headerItems: Array<IHeaderItemType> = [
     onHeaderClick: () => {
       console.log('Clicked');
     },
+    link: '/schedules',
   },
   {
     label: {
@@ -54,5 +55,6 @@ export const headerItems: Array<IHeaderItemType> = [
     onHeaderClick: () => {
       console.log('Clicked status');
     },
+    link: '/status',
   },
 ];
