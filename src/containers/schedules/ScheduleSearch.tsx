@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Form, FormikProps, Formik } from 'formik';
+import { Form, FormikProps, Formik, FormikHelpers } from 'formik';
+import * as Yup from 'yup';
 import SearchBar from 'containers/SearchBar';
 
 type FormType = {
@@ -10,6 +11,12 @@ interface IFormValues {
   departureAirport: string;
   arrivalAirport: string;
 }
+
+const ScheduleSearchSchema = Yup.object({
+  departureAirport: Yup.string().required(),
+  arrivalAirport: Yup.string().required(),
+});
+
 const UnstyledScheduleSearchForm: React.FunctionComponent<FormType> = ({
   className,
   ...props
@@ -23,8 +30,15 @@ const UnstyledScheduleSearchForm: React.FunctionComponent<FormType> = ({
       <h1>My Form</h1>
       <Formik
         initialValues={initialValues}
-        onSubmit={(values, actions) => {
+        validationSchema={ScheduleSearchSchema}
+        validateOnChange={false}
+        validateOnBlur={false}
+        onSubmit={(
+          values: IFormValues,
+          formikHelpers: FormikHelpers<IFormValues>,
+        ) => {
           console.log('Values: ', values);
+          formikHelpers.setSubmitting(false);
         }}
       >
         {(props: FormikProps<IFormValues>) => (
@@ -34,13 +48,21 @@ const UnstyledScheduleSearchForm: React.FunctionComponent<FormType> = ({
               type='search'
               placeholder='Departure Airport, eg: YYZ'
               maxLength={3}
+              size={30}
             />
+            {props.errors.departureAirport && props.touched.departureAirport ? (
+              <div>{props.errors.departureAirport}</div>
+            ) : null}
             <SearchBar
               name='arrivalAirport'
               type='search'
-              placeholder='Arrival Airport, eg: LHR'
+              placeholder='Arrival Airport, egL LHR'
               maxLength={3}
+              size={30}
             />
+            {props.errors.arrivalAirport && props.touched.arrivalAirport ? (
+              <div>{props.errors.arrivalAirport}</div>
+            ) : null}
             <button type='submit'>Submit</button>
           </Form>
         )}
