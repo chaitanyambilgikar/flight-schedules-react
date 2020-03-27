@@ -27,7 +27,7 @@ const UnstyledScheduleSearchForm: React.FunctionComponent<FormType> = ({
   };
   return (
     <div className={className}>
-      <h1>My Form</h1>
+      <h1>Schedule Search</h1>
       <Formik
         initialValues={initialValues}
         validationSchema={ScheduleSearchSchema}

@@ -1,5 +1,13 @@
 import React from 'react';
 import { useField, FieldAttributes } from 'formik';
+import styled from 'styled-components';
+
+const StyledInput = styled.input`
+  padding: 5px;
+  line-height: 2em;
+  border: 1px solid #dddddd;
+  border-radius: 5px;
+`;
 
 export const UnstyledSearchBar: React.FunctionComponent<FieldAttributes<
   any
@@ -7,7 +15,7 @@ export const UnstyledSearchBar: React.FunctionComponent<FieldAttributes<
   const [field, meta, helpers] = useField(props);
   return (
     <>
-      <input
+      <StyledInput
         {...field}
         {...props}
         onChange={e => {
